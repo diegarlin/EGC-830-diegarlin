@@ -8,6 +8,7 @@ install:
 script:
   - for app in $(find . -name 'tests' -type d); do python -m unittest discover $app; done
 
+
 branches:
   only:
     - master
