@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.8"
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  - for app in $(find . -name 'tests' -type d); do python -m unittest discover $app; done
+
+branches:
+  only:
+    - master
